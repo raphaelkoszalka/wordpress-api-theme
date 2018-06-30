@@ -2,7 +2,9 @@
 
 ## how to
 
-Each custom type is a instance of Cochise_Post_Type class at functions.php (EX: https://github.com/raphaelkoszalka/wordpress-api-theme/blob/master/functions.php#L9), after that you'll be neeeding to create the endpoint functions at endpoints folder.
+- Each custom type is a instance of Cochise_Post_Type class at functions.php 
+(EX: https://github.com/raphaelkoszalka/wordpress-api-theme/blob/master/functions.php#L9);
+- Each endpoint is a function within endpoints folder with the structure below
 
 ## structure of endpoint function
 
@@ -45,3 +47,6 @@ add_action( 'rest_api_init', function ()
 ## todo
 - internationalization of admin panel
 - automatization of enpoint function creation
+
+## requirements
+- https://www.advancedcustomfields.com/
