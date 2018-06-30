@@ -1,15 +1,8 @@
 <?php
 
 include( 'class/_cochise_post_type_class.php');
-include('endpoints/landing.php');
-include('endpoints/resume.php');
-include('endpoints/portfolio.php');
 include('endpoints/blog.php');
 
-$landing = new Cochise_Post_Type('landing');
-$resume = new Cochise_Post_Type('resume');
-$about = new Cochise_Post_Type('about');
-$portfolio = new Cochise_Post_Type('portfolio');
 $blog = new Cochise_Post_Type('blog');
 
 function filters( $valid_vars ) {
@@ -19,6 +12,13 @@ function filters( $valid_vars ) {
     );
     return $valid_vars;
 }
+
+function my_acf_google_map_api( $api ) {
+    $api['key'] = 'GOOGLE_MAPS_API_KEY';
+    return $api;
+}
+
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 add_filter( 'rest_query_vars', 'filters' );
 add_filter('show_admin_bar', '__return_false');
 
