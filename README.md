@@ -3,7 +3,6 @@
 ## how to
 
 - each custom type is a instance of Cochise_Post_Type class at functions.php 
--- (EX: https://github.com/raphaelkoszalka/wordpress-api-theme/blob/master/functions.php#L9);
 - create add, admin, list and edit pages at wp-admin with it's corresponding page template
 - redirect admin login to /admin instead of /wp-admin
 - each endpoint is a function within endpoints folder with the structure below
