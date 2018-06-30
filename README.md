@@ -1,4 +1,4 @@
-# Wordpress REST API Theme with admin panel outside of wp-admin
+# WP-REST-API Theme with admin panel outside of wp-admin
 
 ## how to
 
